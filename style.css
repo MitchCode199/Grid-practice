@@ -18,7 +18,7 @@
     'pizza burger hotdog chicken drinks bread rice water';
 }
 
-@media screen and (max-width > 1024px) {
+@media screen and (max-width: 1024px) {
     .popular{
         display: grid;
         justify-content: center;
@@ -26,11 +26,7 @@
         grid-template-rows: repeat(2, 186.2px);
         grid-template-areas: 
         'pizza burger hotdog chicken'
-        'drinks bread rice water'
-        ;
-    }
-    .see-more{
-        display: none;
+        'drinks bread rice water';
     }
 }
 
@@ -43,22 +39,25 @@
         'chicken drinks bread'
         'rice water water';
     }
+    .water{
+        grid-column: span 2;
+    }
 }
+
 @media screen and (max-width:425px) {
     .popular{
         grid-template-columns: repeat(2, 130px);
         grid-template-rows: repeat(2, 186.2px);
         grid-template-areas: 
         'pizza burger' 
-        'hotdog water';
+        'hotdog chicken';
     }
-    .drinks, .bread, .rice, .chicken{
+    .drinks, .bread, .rice, .water{
         display: none !important; 
     }
     .see-more{
         display:block !important;
-    }
-    
+    } 
 }
 
 .container{
@@ -74,12 +73,13 @@
 
 .menu{
     display: flex; flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
     gap: 3px;
 }
 
 img{
-    width: 120px;
+    width: 100%;
     height: 100px;
     object-fit: cover;
     border-radius: 5px;
