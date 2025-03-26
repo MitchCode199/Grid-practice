@@ -2,13 +2,25 @@
     display: grid;
     justify-content: center;
     gap: 1rem;
-    grid-template-columns: repeat(4, 130px);
-    grid-template-rows: repeat(2, 186.2px);
+    grid-template-columns: repeat(8, 130px);
+    grid-template-rows: repeat(1, 186.2px);
     grid-template-areas: 
-    'pizza burger hotdog chicken'
-    'drinks bread rice water'
-    ;
+    'pizza burger hotdog chicken drinks bread rice water';
 }
+
+@media screen and (max-width:1024px) {
+    .popular{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, 130px);
+        grid-template-rows: repeat(2, 186.2px);
+        grid-template-areas: 
+        'pizza burger hotdog chicken'
+        'drinks bread rice water'
+        ;
+    }
+}
+
 @media screen and (max-width:768px) {
     .popular{
         grid-template-columns: repeat(3, 130px);
