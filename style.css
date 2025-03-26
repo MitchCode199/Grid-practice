@@ -1,5 +1,6 @@
 .popular{
     display: grid;
+    justify-content: center;
     gap: 1rem;
     grid-template-columns: repeat(4, 130px);
     grid-template-rows: repeat(2, 186.2px);
