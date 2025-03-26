@@ -1,6 +1,15 @@
+.section{
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
 .popular{
     display: grid;
-    justify-content: center;
+    justify-content: space-around;
     gap: 1rem;
     grid-template-columns: repeat(8, 130px);
     grid-template-rows: repeat(1, 186.2px);
@@ -35,13 +44,13 @@
 @media screen and (max-width:425px) {
     .popular{
         grid-template-columns: repeat(2, 130px);
-        grid-template-rows: repeat(4, 186.2px);
+        grid-template-rows: repeat(2, 186.2px);
         grid-template-areas: 
         'pizza burger' 
-        'hotdog chicken' 
-        'drinks bread'
-        'rice water'
-        ;
+        'hotdog water';
+    }
+    .drinks, .bread, .rice, .chicken{
+        display: none !important; 
     }
 }
 
