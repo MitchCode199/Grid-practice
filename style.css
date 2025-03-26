@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     padding: 10px 0px;
 }
 
@@ -17,7 +18,7 @@
     'pizza burger hotdog chicken drinks bread rice water';
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width > 1024px) {
     .popular{
         display: grid;
         justify-content: center;
@@ -28,6 +29,9 @@
         'drinks bread rice water'
         ;
     }
+    .see-more{
+        display: none;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -37,8 +41,7 @@
         grid-template-areas: 
         'pizza burger hotdog'
         'chicken drinks bread'
-        'rice water water'
-        ;
+        'rice water water';
     }
 }
 @media screen and (max-width:425px) {
@@ -52,6 +55,10 @@
     .drinks, .bread, .rice, .chicken{
         display: none !important; 
     }
+    .see-more{
+        display:block !important;
+    }
+    
 }
 
 .container{
@@ -78,7 +85,7 @@ img{
     border-radius: 5px;
 }
 
-button{
+.order-now{
     padding: 2px 4px;
     border-radius: 3px;
     color: whitesmoke;
@@ -88,7 +95,7 @@ button{
     transition: 0.2s ease-in-out;
 }
 
-button:hover{
+.order-now:hover{
     background: linear-gradient(to right, darkorange, darkred);
 }
 
@@ -101,3 +108,16 @@ span{
     font-size:small;
     color: gray;
 }
+ .see-more{
+    width: 280px;
+    background-color: rgb(209, 209, 209);
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    display: none;
+ }
+
+ .see-more a{
+    text-decoration: none;
+    color: whitesmoke;
+ }
